@@ -1,12 +1,12 @@
 package org.jetbrains.ngramselector.selection.selectors
 
 import org.jetbrains.ngramgenerator.helpers.TimeLogger
-import org.jetbrains.ngramselector.selection.GramList
+import org.jetbrains.ngramselector.selection.GramStatisticList
 
 class DerivativeBoundsSelector(private val point: Double, private val deviation: Double): Selector {
-    override fun select(ngrams: GramList): GramList {
+    override fun select(ngrams: GramStatisticList): GramStatisticList {
         var ngramFrequencyPrev: Int? = null
-        val ngramsSelected: GramList = mutableListOf()
+        val ngramsSelected: GramStatisticList = mutableListOf()
         val timeLogger = TimeLogger(task_name = "N-grams selection via DerivativeBoundsSelector (point: $point, deviation: $deviation)")
 
         ngrams.forEach {

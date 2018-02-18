@@ -1,7 +1,7 @@
 package org.jetbrains.ngramselector.selection.selectors
 
-import org.jetbrains.ngramselector.selection.GramList
+import org.jetbrains.ngramselector.selection.GramStatisticList
 
 interface Selector {
-    fun select(ngrams: GramList): GramList
+    fun select(ngrams: GramStatisticList): GramStatisticList
 }

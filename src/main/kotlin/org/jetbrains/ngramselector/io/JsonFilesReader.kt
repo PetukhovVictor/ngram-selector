@@ -11,16 +11,20 @@ class JsonFilesReader<T>(private val dirPath: String, private val filesExt: Stri
         }
     }
 
-    private fun walkDirectory(callback: (T, File) -> Unit) {
+    private fun walkDirectory(withoutFirstSelect: Boolean = false, callback: (T, File) -> Unit) {
         val dir = File(dirPath)
         dir.walkTopDown().forEach {
             if (it.isFile && it.extension == filesExt) {
-                callback(readFile<ArrayList<T>>(it, entityType)[0], it)
+                if (withoutFirstSelect) {
+                    callback(readFile(it, entityType), it)
+                } else {
+                    callback(readFile<ArrayList<T>>(it, entityType)[0], it)
+                }
             }
         }
     }
 
-    fun run(callback: (T, File) -> Unit) {
-        walkDirectory { content: T, file: File -> callback(content, file) }
+    fun run(withoutFirstSelect: Boolean = false, callback: (T, File) -> Unit) {
+        walkDirectory(withoutFirstSelect) { content: T, file: File -> callback(content, file) }
     }
 }
