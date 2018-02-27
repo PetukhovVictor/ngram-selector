@@ -1,4 +1,4 @@
-package org.jetbrains.ngramgenerator.helpers
+package org.jetbrains.ngramselector.helpers
 
 import java.util.*
 import java.util.concurrent.TimeUnit

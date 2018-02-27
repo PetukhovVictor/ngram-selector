@@ -1,6 +1,6 @@
 package org.jetbrains.ngramselector.selection.selectors
 
-import org.jetbrains.ngramgenerator.helpers.TimeLogger
+import org.jetbrains.ngramselector.helpers.TimeLogger
 import org.jetbrains.ngramselector.selection.GramStatisticList
 
 class DerivativeBoundsSelector(private val point: Double, private val deviation: Double): Selector {
