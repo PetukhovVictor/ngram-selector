@@ -18,7 +18,7 @@ This selector can select n-grams from head or tail of n-grams with sorting by fr
 
 #### Types
 - `head` (set [here](https://github.com/PetukhovVictor/ngram-selector/blob/master/src/main/kotlin/org/jetbrains/ngramselector/Runner.kt#L27)): cut features from head n-grams list with sorting by frequncy;
-- `tail` (set [here](https://github.com/PetukhovVictor/ngram-selector/blob/master/src/main/kotlin/org/jetbrains/ngramselector/Runner.kt#L28): cut features from tail n-grams list with sorting by frequncy.
+- `tail` (set [here](https://github.com/PetukhovVictor/ngram-selector/blob/master/src/main/kotlin/org/jetbrains/ngramselector/Runner.kt#L28)): cut features from tail n-grams list with sorting by frequncy.
 
 #### Parameters
 - `by = 'value'`: n-gram selection with specified value bound after or before which n-grams will be selected;
