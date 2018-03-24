@@ -40,7 +40,7 @@ You can set it [here](https://github.com/PetukhovVictor/ngram-selector/blob/mast
 Program required n-grams map: "n-gram name" - "n-gram value (frequency)".
 
 Example:
-```
+```json
 {
    "RETURN:DOT_QUALIFIED_EXPRESSION:IDENTIFIER":47575,
    "THEN:DOT_QUALIFIED_EXPRESSION:IDENTIFIER":74185,
@@ -73,7 +73,7 @@ Example:
 Output is selected n-gram list and a set of files in the specified directory along the same paths with selected n-grams.
 
 Example selected n-gram file:
-```
+```json
 [
   "BLOCK:POSTFIX_EXPRESSION:SAFE_ACCESS_EXPRESSION",
   "BLOCK:POSTFIX_EXPRESSION:SAFE_ACCESS",
